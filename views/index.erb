@@ -1,0 +1,29 @@
+<html>
+    
+<h3>Simple Car Database</h3>
+
+
+<table>
+   <tr> <th>ID</th><th>Name</th><th>Price</th></tr>
+<% @cars.each do |row| %>
+    <tr>
+        <td><%= row[0] %></td>
+         <td><%= row[1] %></td>
+        <td><%= row[2] %></td>
+        <td><a href="/<%= row[0] %>">[edit]</a></td>
+    </tr>
+ <% end %>
+ </table>
+ 
+ <p>
+ 
+ <form action = '/insert' method="POST">
+     <input type="text" name="name">
+     <input type="text" name="price">
+     <input type="submit">
+ </form>
+ 
+</html>        
+
+    
+

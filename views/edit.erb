@@ -1,0 +1,11 @@
+<html>
+
+
+	<form action="/<%= @car[0]['id'] %>" method="post">
+		<input type="text" name="name" value = "<%= @car[0]['name'] %>"</br>
+	    <input type="text" name="price" value = "<%= @car[0]['price'] %>"</br>
+		<input type="submit" value="edit">
+	</form>
+	<p><a href="/<%= @car[0]['id'] %>/delete">Delete</a></p>
+
+</html>
